@@ -1,14 +1,8 @@
-<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#gram_clone)
-
-# ➤ gram_clone
+# gram_clone
 
 A new Flutter project.
 
-
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#getting-started)
-
-## ➤ Getting Started
+## Getting Started
 
 This project is a starting point for a Flutter application.
 
