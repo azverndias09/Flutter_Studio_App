@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:gram_clone/pages/widgets/themes.dart';
 import 'package:gram_clone/utils/routes.dart';
+import 'package:velocity_x/src/extensions/context_ext.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -31,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-        color: Colors.white,
+        color: context.canvasColor,
         child: SingleChildScrollView(
           child: Form(
             key: _formKey,
@@ -98,13 +100,14 @@ class _LoginPageState extends State<LoginPage> {
                       ),
 
                       Material(
-                        color: Colors.deepPurple,
+                        // ignore: deprecated_member_use
+                        color: MyTheme.darkBluishColor,
                         borderRadius:
                             BorderRadius.circular(changedButton ? 50 : 8),
                         child: InkWell(
                           onTap: () => moveToHome(context),
                           child: AnimatedContainer(
-                            duration: Duration(seconds: 1),
+                            duration: Duration(milliseconds: 500),
                             height: 50,
                             width: changedButton ? 50 : 150,
                             alignment: Alignment.center,

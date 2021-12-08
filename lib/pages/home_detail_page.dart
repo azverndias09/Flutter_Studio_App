@@ -12,10 +12,11 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -25,32 +26,33 @@ class HomeDetailPage extends StatelessWidget {
               onPressed: () {},
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    MyTheme.darkBluishColor,
+                    context.theme.buttonColor,
                   ),
                   shape: MaterialStateProperty.all(
                     const StadiumBorder(),
                   )),
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add To Cart".text.make(),
+            ).wh(120, 50)
           ],
-        ).p16(),
+        ).p32(),
       ),
       body: SafeArea(
-          bottom: false,
-          child: Column(
-            children: [
-              Hero(
-                tag: Key(catalog.id.toString()),
-                child: Image.network(catalog.imgurl),
-              ).p16(),
-              Expanded(
-                child: VxArc(
-                  height: 30,
-                  arcType: VxArcType.CONVEY,
-                  edge: VxEdge.TOP,
-                  child: Container(
-                    width: context.screenWidth,
-                    color: Colors.white,
+        bottom: false,
+        child: Column(
+          children: [
+            Hero(
+              tag: Key(catalog.id.toString()),
+              child: Image.network(catalog.imgurl),
+            ).h32(context),
+            Expanded(
+              child: VxArc(
+                height: 30,
+                arcType: VxArcType.CONVEY,
+                edge: VxEdge.TOP,
+                child: Container(
+                  width: context.screenWidth,
+                  color: context.cardColor,
+                  child: SingleChildScrollView(
                     child: Column(
                       children: [
                         catalog.name.text.xl4
@@ -62,13 +64,19 @@ class HomeDetailPage extends StatelessWidget {
                             .xl
                             .make(),
                         10.heightBox,
+                        "Accusam sit at dolor justo sea kasd invidunt ut. Dolores diam sit sea ipsum rebum. Justo et vero ipsum sed sed ipsum, sit est ipsum eos est, tempor et tempor erat labore justo ipsum gubergren justo duo, dolore est sit aliquyam sea ut. Nonumy rebum diam clita vero amet diam."
+                            .text
+                            .make()
+                            .p16(),
                       ],
                     ).py64(),
                   ),
                 ),
               ),
-            ],
-          )),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
