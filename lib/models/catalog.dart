@@ -1,4 +1,10 @@
 class CatalogModel {
+  static final catModel = CatalogModel._internal();
+
+  CatalogModel._internal();
+
+  factory CatalogModel() => catModel;
+
   static List<Item>? items = [
     Item(
         id: 1,
@@ -9,6 +15,12 @@ class CatalogModel {
         imgurl:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc")
   ];
+
+  Item getById(int id) =>
+      items!.firstWhere((element) => element.id == id, orElse: null);
+
+  // Get Item by position
+  Item getByPosition(int pos) => items![pos];
 }
 
 class Item {
@@ -46,4 +58,6 @@ class Item {
         "color": color,
         "imgurl": imgurl,
       };
+
+  toList() {}
 }

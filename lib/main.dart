@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:gram_clone/pages/cart.dart';
+import 'package:gram_clone/pages/cart_page.dart';
 import 'package:gram_clone/pages/home_page.dart';
 import 'package:gram_clone/pages/login_page.dart';
 import 'package:gram_clone/pages/widgets/themes.dart';
