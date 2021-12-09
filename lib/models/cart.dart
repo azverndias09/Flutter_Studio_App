@@ -1,11 +1,9 @@
+import 'package:velocity_x/velocity_x.dart';
+
+import 'package:gram_clone/core/store.dart';
 import 'package:gram_clone/models/catalog.dart';
 
 class CartModel {
-  static final cartModel = CartModel._internal();
-
-  CartModel._internal();
-
-  factory CartModel() => cartModel;
   late CatalogModel _catalog;
   final List<int> _itemsIds = [];
 
@@ -19,12 +17,26 @@ class CartModel {
 
   num get totalPrice =>
       items.fold(0, (total, current) => total + current.price);
+}
 
-  void add(Item item) {
-    _itemsIds.add(item.id);
+class AddMutation extends VxMutation<MyStore> {
+  final Item item;
+  AddMutation({
+    required this.item,
+  });
+  @override
+  perform() {
+    store!.cart._itemsIds.add(item.id);
   }
+}
 
-  void remove(Item item) {
-    _itemsIds.remove(item.id);
+class RemoveMutation extends VxMutation<MyStore> {
+  final Item item;
+  RemoveMutation({
+    required this.item,
+  });
+  @override
+  perform() {
+    store!.cart._itemsIds.remove(item.id);
   }
 }
