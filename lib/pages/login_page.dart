@@ -3,9 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:gram_clone/pages/widgets/themes.dart';
 import 'package:gram_clone/utils/routes.dart';
-import 'package:velocity_x/src/extensions/context_ext.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }

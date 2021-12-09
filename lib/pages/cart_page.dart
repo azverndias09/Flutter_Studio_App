@@ -4,6 +4,8 @@ import 'package:gram_clone/models/cart.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CartPage extends StatelessWidget {
+  const CartPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +17,7 @@ class CartPage extends StatelessWidget {
       body: Column(
         children: [
           _CartList().p32().expand(),
-          Divider(),
+          const Divider(),
           _CartTotal(),
         ],
       ),
@@ -33,7 +35,7 @@ class _CartTotal extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           VxBuilder(
-            mutations: {RemoveMutation},
+            mutations: const {RemoveMutation},
             builder: (context, _, __) {
               return "\$${_cart.totalPrice}"
                   .text
@@ -70,7 +72,7 @@ class _CartList extends StatelessWidget {
         : ListView.builder(
             itemCount: _cart.items.length,
             itemBuilder: (context, index) => ListTile(
-              leading: Icon(Icons.done),
+              leading: const Icon(Icons.done),
               trailing: IconButton(
                 icon: const Icon(Icons.remove_circle_outline),
                 onPressed: () => RemoveMutation(item: _cart.items[index]),
