@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gram_clone/core/store.dart';
 import 'package:gram_clone/models/cart.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 class CartPage extends StatelessWidget {
@@ -12,7 +13,7 @@ class CartPage extends StatelessWidget {
       backgroundColor: context.canvasColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: "Cart".text.make(),
+        title: "Cart".text.bold.make(),
       ),
       body: Column(
         children: [

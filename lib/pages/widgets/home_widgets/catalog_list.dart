@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gram_clone/models/cart.dart';
 import 'package:gram_clone/models/catalog.dart';
 import 'package:gram_clone/pages/home_detail_page.dart';
 import 'package:gram_clone/pages/widgets/home_widgets/add_to_cart.dart';

@@ -11,6 +11,7 @@ class MyTheme {
       accentColor: darkBluishColor,
       appBarTheme: AppBarTheme(
         color: Colors.white,
+        foregroundColor: darkBluishColor,
         elevation: 0.0,
         iconTheme: const IconThemeData(color: Colors.black),
         // ignore: deprecated_member_use
@@ -27,12 +28,13 @@ class MyTheme {
       accentColor: darkBluishColor,
       appBarTheme: AppBarTheme(
         color: Colors.black,
+        foregroundColor: creamColor,
         elevation: 0.0,
         iconTheme: const IconThemeData(color: Colors.white),
         // ignore: deprecated_member_use
         textTheme: Theme.of(context).textTheme.copyWith(
               headline6:
-                  context.textTheme.headline6!.copyWith(color: Colors.white),
+                  context.textTheme.headline6!.copyWith(color: creamColor),
             ),
       )
 
