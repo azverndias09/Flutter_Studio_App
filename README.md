@@ -1,22 +1,53 @@
-<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#gram_clone)
 
-# ➤ gram_clone
+# Flutter Catalog App
 
-A new Flutter project.
+A Flutter framework based Dart Application that runs on IOS, Android, Web, Windows and Mac (responsive design).
+
+A front-end application that displays a catalog of mock tech products with add to cart and product detail page features.
+Users are greeted with a login page where they enter their username and password before entering.Users can also go to their cart and view/delete products from the cart.
+
+## Features
+
+- Light/dark mode (based on system)
+- Smooth Animations
+- Fullscreen mode
+- Cross platform
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#getting-started)
 
-## ➤ Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+Install the Android App with the link: [Click here to download](https://drive.google.com/file/d/1hSd6bj06hUfd4NIpviaa2ulDNJisv4nz/view?usp=sharing)
 
-A few resources to get you started if this is your first Flutter project:
+Apple IOS users and Web users experience the same app through your browser with [this link](https://catalogapp1615.netlify.app/)
+    
+## Acknowledgements
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+ - This Project was the result of an awesome 30 day course by the channel: [CodePur on Youtube](https://www.youtube.com/channel/UCFTM1FGjZSkoSPDZgtbp7hA)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## Authors
+
+- [@azverndias09 ( Azvern Dias )](https://github.com/azverndias09)
+
+
+## Contributing
+
+Contributions are always welcome!
+
+
+
+
+
+
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at my Instagram : [@azz.create](https://www.instagram.com/azz.create/)
+
